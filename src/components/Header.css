@@ -1,0 +1,57 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover {
+  color: #00bcd4;
+}
+
+.nav-social a {
+  margin-left: 15px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-social a:hover {
+  color: #00bcd4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Later we can add a hamburger menu */
+  }
+}

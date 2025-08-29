@@ -1,0 +1,103 @@
+.about-container {
+  padding: 120px 8% 40px 8%; /* Increased top padding to move content down */
+  background: #0c0d0d; /* Solid soft ivory for professional look */
+  color: #455a64; /* Dark gray for primary text */
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Flex wrapper for all cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Slightly larger gap for better spacing */
+  justify-content: center;
+}
+
+/* Individual card style */
+.card {
+  background-color: #c7cfcf; /* Creamy white for cards */
+  padding: 30px 35px; /* Increased padding for a more spacious feel */
+  border-radius: 16px; /* Softer corners */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); /* Refined, softer shadow */
+  flex: 1 1 400px; /* Default: grow, shrink, basis */
+  min-width: 320px; /* Slightly wider minimum width */
+  margin-bottom: 30px; /* Reduced bottom margin for tighter layout */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-4px); /* Slightly smaller lift for subtlety */
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* Stretched cards (Experience & Skills) */
+.card-stretched {
+  flex: 1 1 100%; /* Full width */
+}
+
+/* Headings */
+.card h2 {
+  font-size: 1.9rem; /* Slightly larger for emphasis */
+  color: #263238; /* Deep slate blue for headings */
+  margin-bottom: 12px;
+  font-weight: 600; /* Bolder for modern look */
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #263238; /* Deep slate blue for consistency */
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Paragraphs */
+.card p {
+  font-weight: 400; /* Lighter for readability */
+  color: #455a64; /* Dark gray for secondary text */
+  line-height: 1.6; /* Improved readability */
+  margin-bottom: 12px;
+}
+
+/* Skills buttons container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* Slightly larger gap for buttons */
+  justify-content: center; /* Center-align buttons */
+}
+
+/* Skill button style */
+.skill-button {
+  background: linear-gradient(45deg, #0288d1, #4fc3f7); /* Blue gradient */
+  color: #ffffff;
+  padding: 10px 20px; /* Larger padding for better click area */
+  border-radius: 25px; /* More rounded for pill-like appearance */
+  font-size: 0.95rem; /* Slightly larger text */
+  font-weight: 500;
+  border: none;
+  cursor: default; /* Maintain non-clickable style */
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; /* Smooth hover transition */
+}
+
+.skill-button:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  background: linear-gradient(45deg, #0277bd, #29b6f6); /* Darker blue gradient on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column; /* Stack cards on smaller screens */
+    align-items: center;
+  }
+
+  .card {
+    min-width: 280px; /* Adjust for smaller screens */
+  }
+
+  .skill-button {
+    padding: 8px 16px; /* Smaller padding for mobile */
+    font-size: 0.9rem;
+  }
+}
